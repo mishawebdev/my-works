@@ -100,7 +100,6 @@ body {
 
 .hero__container {
   display: flex;
-  max-width: 115rem;
 }
 @media (max-width: 47.99875em) {
   .hero__container {
@@ -188,8 +187,8 @@ body {
   background-image: linear-gradient(199deg, #192230 44%, #5a1115 81%, #000 100%);
 }
 .about__item--full {
-  min-height: 26.25rem;
   max-width: 100%;
+  min-height: 26.25rem;
   background-image: linear-gradient(199deg, #192230 44%, #5a1115 81%, #000 100%);
 }
 @media (min-width: 118.75em) {

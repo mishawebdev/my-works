@@ -58,7 +58,7 @@ body {
 	// .hero__container
 	&__container {
 		display: flex;
-		max-width: toRem(1840);
+		// max-width: toRem(1840);
 		@media (max-width: toEm(767.98)){
 			font-size: toRem(28);
 			flex-direction: column;
@@ -143,8 +143,8 @@ body {
 		}
 
 		&--full {
-			min-height: toRem(420);
 			max-width: 100%;
+			min-height: toRem(420);
 			background-image: linear-gradient(199deg,#192230 44%,#5a1115 81%,#000 100%);
 		}
 
