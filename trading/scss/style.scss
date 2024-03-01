@@ -40,7 +40,6 @@ body {
 }
 
 [class*="__container"] {
-	max-width: toRem(1870);
 	margin: 0 auto;
 	padding-left: toRem(15);
 	padding-right: toRem(15);
@@ -59,10 +58,10 @@ body {
 	// .hero__container
 	&__container {
 		display: flex;
-		flex-wrap: wrap;
+		max-width: toRem(1840);
 		@media (max-width: toEm(767.98)){
 			font-size: toRem(28);
-			justify-content: center;
+			flex-direction: column;
 		};
 	}
 	// .hero__text-body
@@ -70,10 +69,12 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		flex: 0 0 toRem(900);
+		flex: 0 1 48%;
+
 		padding-left: toRem(60);
 		padding-bottom: toRem(60);
 		padding-top: toRem(60);
+
 		background-image: linear-gradient(45deg, rgb(25, 34, 48) 0%, rgb(20, 55, 98) 25%, rgb(15, 71, 139) 50%, rgb(20, 55, 98) 75%, rgb(25, 34, 48) 100%);
 	}
 	// .hero__logo
@@ -97,9 +98,11 @@ body {
 		height: 100%;
 		max-width: 100%;
 		width: toRem(940);
+		
 		clip-path: polygon(0 0, 100% 0, 100% 53%, 61% 100%, 0 100%);
+
 		@media (max-width: toEm(992.98)) {
-			flex: 0 1 auto;
+			
 		}
 	}
 }
@@ -120,22 +123,29 @@ body {
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 		row-gap: toRem(40);
 		column-gap: toRem(40);
 		@media (max-width: toEm(767.98)) {
-			
+			flex-direction: column;
 		}
 	}
 	// .about__item
 	&__item {
-		background-image: linear-gradient(199deg,#192230 44%,#5a1115 81%,#000 100%);
-		flex: 0 1 toRem(900);
+		flex: 1 1 48%;
 		max-width: 100%;
-		min-height: toRem(420);
 
 		&--bottom {
-			flex: 0 1 toRem(1840);
+			flex: 0 1 100%;
 			max-width: 100%;
+			min-height: toRem(420);
+			background-image: linear-gradient(199deg,#192230 44%,#5a1115 81%,#000 100%);
+		}
+
+		&--full {
+			min-height: toRem(420);
+			max-width: 100%;
+			background-image: linear-gradient(199deg,#192230 44%,#5a1115 81%,#000 100%);
 		}
 
 		&--body {
@@ -144,7 +154,7 @@ body {
 			@include adaptiveValue("padding-right", 60, 25);
 		}
 		
-		@media (min-width: toEm(992.98)) {
+		@media (min-width: toEm(767.98)) {
 
 		}
 	}
@@ -158,6 +168,7 @@ body {
 		min-width: 100%;
 
 		&--top {
+			min-height: toRem(318);
 			@include adaptiveValue("padding-top", 55, 30);
 			@include adaptiveValue("padding-bottom", 55, 30);
 			@include adaptiveValue("padding-left", 60, 20);
