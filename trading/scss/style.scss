@@ -59,6 +59,7 @@ body {
 	&__container {
 		display: flex;
 		// max-width: toRem(1840);
+		justify-content: space-between;
 		@media (max-width: toEm(767.98)){
 			font-size: toRem(28);
 			flex-direction: column;
@@ -69,7 +70,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		flex: 0 1 48%;
+		flex: 0 1 50%;
 
 		padding-left: toRem(60);
 		padding-bottom: toRem(60);
