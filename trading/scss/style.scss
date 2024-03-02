@@ -93,7 +93,9 @@ body {
 		}
 	}
 	// .hero__image
-	&__image img {
+	&__image  {
+		width: 50%;
+		img { 
 		aspect-ratio: 940 / 800;
 		object-fit: cover;
 		height: 100%;
@@ -101,7 +103,7 @@ body {
 		width: toRem(940);
 		
 		clip-path: polygon(0 0, 100% 0, 100% 53%, 61% 100%, 0 100%);
-
+	}
 		@media (max-width: toEm(992.98)) {
 			
 		}

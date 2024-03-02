@@ -149,6 +149,9 @@ body {
 .hero__text span {
   color: #377de5;
 }
+.hero__image {
+  width: 50%;
+}
 .hero__image img {
   aspect-ratio: 940/800;
   -o-object-fit: cover;
