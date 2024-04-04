@@ -1,7 +1,7 @@
 @use "sass:math";
 
 // Мінімальна ширина сторінки
-$minWidth: 320;
+$minWidth: 360;
 // Ширина полотна (макету)
 $maxWidth: 1920;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
@@ -44,6 +44,8 @@ body {
 	margin: 0 auto;
 	padding-left: toRem(15);
 	padding-right: toRem(15);
+	width: toRem(1870);
+	max-width: 100%;
 }
 
 // ====== HERO SECTION ======== //
@@ -59,8 +61,8 @@ body {
 	// .hero__container
 	&__container {
 		display: flex;
-		// max-width: toRem(1840);
-		justify-content: space-between;
+		// width: toRem(1870);
+		// max-width: 100%;
 		@media (max-width: toEm(767.98)){
 			font-size: toRem(28);
 			flex-direction: column;
@@ -71,7 +73,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		flex: 0 1 50%;
+		flex: 0 1 49%;
 
 		padding-left: toRem(60);
 		padding-bottom: toRem(60);
@@ -94,7 +96,8 @@ body {
 	}
 	// .hero__image
 	&__image  {
-		width: 50%;
+		width: 51%;
+		max-width: 100%;
 		img { 
 		aspect-ratio: 940 / 800;
 		object-fit: cover;
@@ -202,51 +205,77 @@ body {
 	&__container {
 		display: flex;
 		// max-width: toRem(1840);
-		justify-content: space-between;
+		// justify-content: space-between;
 		@media (max-width: toEm(767.98)){
 			font-size: toRem(28);
 			flex-direction: column;
 		};
 	}
 	// .opportunities__image
-	&__image img{
-		aspect-ratio: 940 / 1127;
-		object-fit: cover;
-		height: 100%;
+	&__image {
+		width: 51%;
 		max-width: 100%;
-		width: toRem(940);
+		img {
+			aspect-ratio: 940 / 1127;
+			object-fit: cover;
+			height: 100%;
+			max-width: 100%;
+			width: toRem(940);
 		
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%, 0 63%);
-
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%, 0 63%);
+		}
 		@media (max-width: toEm(992.98)) {
 			
 		}
 	}
 	// .opportunities__body
 	&__body {
+		width: 49%;
+		max-width: 100%;
 		@include adaptiveValue("padding-left", 40, 20);
+		@include adaptiveValue("padding-right", 40, 20);
 		@include adaptiveValue("padding-top", 50, 20);
-		background-color: #377de5;
+		background-image: linear-gradient(252deg, #192230 0%, #192230 42.37%, #142d4d 51.56%, #10325a 64.27%, #0f2d51 91.68%, #111822 100%);
 	}
 	// .opportunities__body-content
 	&__body-content {
 	}
-	// .opportunities__header
-	&__header {
+	// .opportunities__title
+	&__title {
 		color: #fff;
 		@include adaptiveValue("font-size", 79, 35);
 		text-align: center;
+		line-height: 110%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 20);
+		}
 	}
 	// .opportunities__items
 	&__items {
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(40);
 	}
 	// .opportunities__item
 	&__item {
+		min-height: toRem(420);
+		@include adaptiveValue("padding-left", 60, 20);
+		@include adaptiveValue("padding-right", 90, 20);
+		@include adaptiveValue("padding-top", 50, 20);
+		@include adaptiveValue("padding-bottom", 50, 20);
+		background-image: linear-gradient(45deg, rgb(25, 34, 48) 0%, rgb(20, 55, 98) 25%, rgb(15, 71, 139) 50%, rgb(20, 55, 98) 75%, rgb(25, 34, 48) 100%);
 	}
-	// .opportunities__subheader
-	&__subheader {
+	// .opportunities__subtitle
+	&__subtitle {
+		color: #377de5;
+		@include adaptiveValue("font-size", 79, 35);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 10);
+		}
 	}
 	// .opportunities__text
 	&__text {
+		color: #fff;
+		line-height: 140%;
 	}
 }
