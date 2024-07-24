@@ -11,6 +11,7 @@ body {
 
 [class*="__container"] {
   max-width: 1250px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -125,6 +126,7 @@ body {
   width: 207px;
 }
 
-.main-section__image {
-  max-width: 698px;
+.main-section__image{
+  width: 698px;
+  width: 100%;
 }
