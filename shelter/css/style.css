@@ -314,7 +314,7 @@ body {
   .our-friends__wrapper {
     flex-wrap: nowrap;
     justify-content: flex-start;
-    overflow-x: auto;
+    overflow-x: hidden;
     width: 580px;
     column-gap: 0;
     padding-left: 0;
