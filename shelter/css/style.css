@@ -313,8 +313,10 @@ body {
 @media (max-width: 768px) {
   .our-friends__wrapper {
     flex-wrap: nowrap;
+    justify-content: flex-start;
     overflow-x: auto;
     width: 580px;
+    column-gap: 0;
   }
 }
 
