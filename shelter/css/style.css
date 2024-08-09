@@ -271,6 +271,7 @@ body {
 .our-friends__content {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -302,8 +303,7 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  /* column-gap: 90px; */
-  margin: 0 90px;
+  column-gap: 90px;
   flex-wrap: wrap;
   margin-bottom: 60px;
   padding-left: 53px;
@@ -315,7 +315,6 @@ body {
     flex-wrap: nowrap;
     overflow-x: auto;
     width: 580px;
-
   }
 }
 
