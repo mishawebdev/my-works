@@ -310,14 +310,22 @@ body {
 
 @media (max-width: 768px) {
   .our-friends__wrapper {
-    /* padding-left: 412px;
-    flex-wrap: nowrap; */
+    margin-right: 40px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
+  
 }
 
 .our-friends__card img,
 .pets__card img {
   margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .our-friends__card {
+  flex: 1 1 270px;
+}
 }
 
 .our-friends__card,
